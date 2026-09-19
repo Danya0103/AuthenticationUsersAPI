@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AuthenticationUsersAPI.Models;
 
-public partial class Account
+public /* partial */ class Account
 {
     public int Id { get; set; }
 
