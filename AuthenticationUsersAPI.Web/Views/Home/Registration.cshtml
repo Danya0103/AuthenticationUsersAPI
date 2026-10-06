@@ -1,0 +1,26 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Sign Up";
+    Layout = "_Layout";
+}
+
+<h2>Registration</h2>
+<form asp-action="Registration" method="post">
+
+    <input type="text" asp-for="Username" placeholder="Enter username:">
+    <span asp-validation-for="Username" class="text-danger"></span><br>
+
+    <input type="password" asp-for="Password" placeholder="Enter password:">
+    <span asp-validation-for="Password" class="text-danger"></span><br>
+
+    <input type="password" asp-for="ConfirmPassword" placeholder="Confirm password:">
+    <span asp-validation-for="ConfirmPassword" class="text-danger"></span><br>
+
+    <button>Register</button>
+</form>
+
+<p>Already have account? <a asp-action="Login">Sign In</a></p>
+
+
+

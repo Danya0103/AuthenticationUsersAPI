@@ -1,0 +1,20 @@
+﻿@model LoginViewModel
+
+@{
+    ViewBag.Title = "Sign In";
+    Layout = "_Layout";
+}
+
+<h2>Login</h2>
+<form asp-action="Login" method="post">
+
+    <input type="text" asp-for="Username" placeholder="Enter username:">
+    <span asp-validation-for="Username" class="text-danger"></span><br>
+
+    <input type="password" asp-for="Password" placeholder="Enter password:">
+    <span asp-validation-for="Password" class="text-danger"></span><br>
+
+    <button>Login</button>
+</form>
+
+<p>Do not have account? <a asp-action="Registration">Sign Up</a></p>

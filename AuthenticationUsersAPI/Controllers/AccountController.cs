@@ -19,7 +19,7 @@ public class AccountController : ControllerBase
         _usersService = usersService;
     }
 
-    [HttpPost("register")]
+    [HttpPost("register/{role}")]
     [AllowAnonymous]
     public async Task<IActionResult> RegisterAsync([FromBody] CreateAccountDto dto, string role)
     {
